@@ -49,6 +49,9 @@ const KnightMoves = function (sArr, dArr) {
       });
       if (found) path.push(arr);
     };
+    if (checkNextMoves(sArr)) {
+      return [sArr];
+    }
     while (found == false) {
       checkLanded(sArr, 0);
       depth++;
@@ -74,4 +77,4 @@ const KnightMoves = function (sArr, dArr) {
   } else return findPath(sArr);
 };
 
-KnightMoves([0, 0], [7, 7]);
+KnightMoves([3, 2], [4, 4]);
