@@ -66,7 +66,7 @@ const KnightMoves = function (sArr, dArr) {
   };
   let answer = prepareAnswer(findPath());
   console.log(
-    `The Knight made it in ${depth} move(s)!, the sequence was\n ${answer}`
+    `The Knight made it in ${depth} move(s)!, the sequence was ${answer}`
   );
 
   if (checkNextMoves(sArr)) {
@@ -74,4 +74,4 @@ const KnightMoves = function (sArr, dArr) {
   } else return findPath(sArr);
 };
 
-KnightMoves([3, 4], [7, 7]);
+KnightMoves([0, 0], [7, 7]);
