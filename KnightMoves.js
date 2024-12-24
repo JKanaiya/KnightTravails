@@ -1,19 +1,10 @@
 import { Coords } from "./Coords.js";
 
 const KnightMoves = function (sArr, dArr) {
-  const getAdjList = function (arr) {
-    let adjList = [];
-    for (let val of arr)
-      if (val) {
-        if (!Array.isArray(adjList[val[0]])) {
-          adjList[val[0]] = [val[1]];
-        } else adjList[val[0]].push(val[1]);
-      }
-
-    return adjList;
-  };
-
-  let landingSquares = getAdjList(Coords.getCoords(dArr[0], dArr[1]));
+  let path = [];
+  let found = false;
+  let depth = 1;
+  let points = null;
 
   const checkNextMoves = function (arr) {
     arr = Coords.getCoords(arr[0], arr[1]);
@@ -27,10 +18,6 @@ const KnightMoves = function (sArr, dArr) {
     }
     return a;
   };
-  let path = [];
-  let found = false;
-  let depth = 1;
-  let points = null;
 
   const findPath = function () {
     const checkLanded = function (arr, count) {
@@ -58,6 +45,7 @@ const KnightMoves = function (sArr, dArr) {
     }
     return path;
   };
+
   const prepareAnswer = function (arr) {
     arr.reverse();
     let format = [...arr, dArr];
@@ -73,4 +61,4 @@ const KnightMoves = function (sArr, dArr) {
   );
 };
 
-KnightMoves([3, 2], [7, 4]);
+KnightMoves([0, 2], [7, 4]);
