@@ -1,6 +1,6 @@
 # KnightTravails
 
-KnightTravails provides a recursive solution to find the minimum amount of moves a knight would make between 2 squares on a normal chessboard.
+KnightTravails provides a recursive solution to find the minimum amount of moves a knight would need to make to travel the distance between 2 given squares.
 
 ## Usage
 
