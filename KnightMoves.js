@@ -1,4 +1,7 @@
 import { Coords } from "./Coords.js";
+import process from "process";
+
+const args = process.arvg;
 
 const KnightMoves = function (sArr, dArr) {
   let path = [];
@@ -57,8 +60,16 @@ const KnightMoves = function (sArr, dArr) {
   };
   let answer = prepareAnswer(findPath());
   console.log(
-    `The Knight made it in ${depth} move(s)!, the sequence was ${answer}`
+    `The Knight made it in ${depth} move(s)!, the sequence was ${answer}`,
   );
 };
 
-KnightMoves([0, 2], [7, 4]);
+const coord1 = process.argv[2].split(",");
+const coord2 = process.argv[3].split(",");
+
+KnightMoves(
+  [Number(coord1[0]), Number(coord1[1])],
+  [Number(coord2[0]), Number(coord2[1])],
+);
+
+export default KnightMoves;
