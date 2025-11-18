@@ -4,18 +4,17 @@ KnightTravails provides a recursive solution to find the minimum amount of moves
 
 ## Usage
 
-### Setup
-
 1. Clone the repo
 ```bash
-git clone https://github.com/JKanaiya/KnightTravailscd
+git clone https://github.com/JKanaiya/KnightTravails
+cd KnightTravails
 ```
 2. Install dependencies
 ```bash
 npm install
 ```
 
-4. Give the coordinates
+4. Calculate Moves
 ```bash
 # Give the coordinates
 node KnightMoves.js <coord1, coord2> <coord1, coord2>
