@@ -16,7 +16,7 @@ npm install
 
 4. Calculate Moves
 ```bash
-# Give the coordinates
+# Give the coordinates eg node KnightMoves 0,4 7,4
 node KnightMoves.js <coord1, coord2> <coord1, coord2>
 ```
 
